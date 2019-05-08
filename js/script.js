@@ -2,5 +2,6 @@ var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity(elem, {
 
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    fullscreen: true
 });
