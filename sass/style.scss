@@ -21,6 +21,7 @@ body {
 .container {
     margin: 0 auto;
     height: 100%;
+    max-width: 725px;
     background-size: contain;
     display: flex;
     justify-content: center;
@@ -30,4 +31,10 @@ body {
         font-family: sans-serif;
         font-size: 40px;
     }
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background: #333;
 }
