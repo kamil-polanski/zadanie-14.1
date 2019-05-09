@@ -1,8 +1,9 @@
-var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity(elem, {
+var flkty = new Flickity('.carousel', {
+    hash: true,
     pageDots: false,
     cellAlign: 'left',
-    fullscreen: true,
+    lazyLoad: 2,
+
 
 
 
