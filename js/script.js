@@ -3,10 +3,6 @@ var flkty = new Flickity('.carousel', {
     pageDots: false,
     cellAlign: 'left',
     lazyLoad: 2,
-
-
-
-
 });
 
 var progressBar = document.querySelector('.progress-bar');
