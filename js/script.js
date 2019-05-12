@@ -51,21 +51,6 @@ const data = [{
 
 ];
 
-(function() {
-    window.initMap = function() {
-        const map = new google.maps.Map(document.querySelector('#map'), {
-            zoom: 8.5,
-            center: data[4].cords,
-        });
-        for (var j = 0; j < data.length; j++) {
-            const marker = new google.maps.Marker({
-                position: data[j].cords,
-                map: map
-            });
-            console.log(data[j].cords);
-        }
-    }
-})();
 
 (function() {
     const output = document.querySelector(`#template`).innerHTML;
@@ -100,3 +85,22 @@ for (ele of button) {
         flkty.select(0);
     });
 }
+
+(function() {
+    window.initMap = function() {
+        const map = new google.maps.Map(document.querySelector('#map'), {
+            zoom: 8.5,
+            center: data[4].cords,
+        });
+        for (let j = 0; j < data.length; j++) {
+            const marker = new google.maps.Marker({
+                position: data[j].cords,
+                map: map
+            });
+            console.log(data[j].id);
+            marker.addListener('click', function() {
+                flkty.select([j]);
+            });
+        }
+    }
+})();
