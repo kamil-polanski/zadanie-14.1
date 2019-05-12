@@ -1,49 +1,71 @@
-(function() {
-    window.initMap = function() {
-        const uluru = { lat: -25.363, lng: 131.044 };
-        const map = new google.maps.Map(document.querySelector('#map'), {
-            zoom: 4,
-            center: uluru
-        });
-        const marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-})();
-
 const data = [{
         title: `Odcinek AMC`,
         img: `images/DSC_0137.JPG`,
         desciption: `linii DISAMATIC`,
-        id: `1`
+        id: `1`,
+        cords: {
+            lat: 50.137508,
+            lng: 19.445713
+        }
     },
     {
         title: `OTTO Junker`,
         img: `images/DSC_0257.JPG`,
         desciption: `zalewarka`,
-        id: `2`
+        id: `2`,
+        cords: {
+            lat: 50.164369,
+            lng: 19.462261
+        }
     },
     {
         title: `Formierka HWS`,
         img: `images/DSC_0262.JPG`,
         desciption: ``,
-        id: `3`
+        id: `3`,
+        cords: {
+            lat: 50.076869,
+            lng: 19.444664
+        }
     },
     {
         title: `Linia HWS`,
         img: `images/DSC_0268.JPG`,
         desciption: `składarka`,
-        id: `4`
+        id: `4`,
+        cords: {
+            lat: 50.102355,
+            lng: 19.581575
+        }
     },
     {
         title: `ABB OCC40`,
         img: `images/DSC_0273.JPG`,
         desciption: `zalewarka`,
-        id: `5`
+        id: `5`,
+        cords: {
+            lat: 50.343392,
+            lng: 19.544064
+        }
     },
 
 ];
+
+(function() {
+    window.initMap = function() {
+        const map = new google.maps.Map(document.querySelector('#map'), {
+            zoom: 8.5,
+            center: data[4].cords,
+        });
+        for (var j = 0; j < data.length; j++) {
+            const marker = new google.maps.Marker({
+                position: data[j].cords,
+                map: map
+            });
+            console.log(data[j].cords);
+        }
+    }
+})();
 
 (function() {
     const output = document.querySelector(`#template`).innerHTML;
