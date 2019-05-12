@@ -90,17 +90,18 @@ for (ele of button) {
     window.initMap = function() {
         const map = new google.maps.Map(document.querySelector('#map'), {
             zoom: 8.5,
-            center: data[4].cords,
+            center: { lat: 50.343392, lng: 19.544064 },
         });
-        for (let j = 0; j < data.length; j++) {
+        data.forEach(function(ele, index) {
+            console.log(ele.cords);
             const marker = new google.maps.Marker({
-                position: data[j].cords,
+                position: ele.cords,
                 map: map
             });
-            console.log(data[j].id);
             marker.addListener('click', function() {
-                flkty.select([j]);
+                flkty.select(index);
             });
-        }
+        });
+
     }
 })();
