@@ -1,7 +1,7 @@
 const data = [{
-        title: `Odcinek AMC`,
-        img: `images/DSC_0137.JPG`,
-        desciption: `linii DISAMATIC`,
+        title: `Zalew Chechło`,
+        img: `images/chechlo.jpg`,
+        desciption: `Trzebinia`,
         id: `1`,
         cords: {
             lat: 50.137508,
@@ -9,9 +9,9 @@ const data = [{
         }
     },
     {
-        title: `OTTO Junker`,
-        img: `images/DSC_0257.JPG`,
-        desciption: `zalewarka`,
+        title: `Zalew Balaton`,
+        img: `images/balaton.jpg`,
+        desciption: `Trzebinia`,
         id: `2`,
         cords: {
             lat: 50.164369,
@@ -19,8 +19,8 @@ const data = [{
         }
     },
     {
-        title: `Formierka HWS`,
-        img: `images/DSC_0262.JPG`,
+        title: `Zamek Lipowiec`,
+        img: `images/babice14.jpg`,
         desciption: ``,
         id: `3`,
         cords: {
@@ -29,9 +29,9 @@ const data = [{
         }
     },
     {
-        title: `Linia HWS`,
-        img: `images/DSC_0268.JPG`,
-        desciption: `składarka`,
+        title: `Zamek Tenczyn`,
+        img: `images/tenczyn.jpg`,
+        desciption: `Rudno`,
         id: `4`,
         cords: {
             lat: 50.102355,
@@ -39,9 +39,9 @@ const data = [{
         }
     },
     {
-        title: `ABB OCC40`,
-        img: `images/DSC_0273.JPG`,
-        desciption: `zalewarka`,
+        title: `Pustynia Błędowska`,
+        img: `images/pustynia.jpg`,
+        desciption: `Klucze`,
         id: `5`,
         cords: {
             lat: 50.343392,
