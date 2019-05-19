@@ -56,10 +56,10 @@ const data = [{
     const output = document.querySelector(`#template`).innerHTML;
     Mustache.parse(output);
     let generated = ``;
-    for (var i = 0; i < data.length; i++) {
-        generated += Mustache.render(output, data[i]);
+    data.forEach(function(ele) {
+        generated += Mustache.render(output, ele);
         console.log(generated);
-    }
+    });
     const results = document.querySelector(`#results`);
     results.insertAdjacentHTML(`beforeend`, generated);
 })();
