@@ -90,7 +90,7 @@ for (ele of button) {
     window.initMap = function() {
         const map = new google.maps.Map(document.querySelector('#map'), {
             zoom: 8.5,
-            center: { lat: 50.343392, lng: 19.544064 },
+            center: data[0].cords,
         });
         data.forEach(function(ele, index) {
             console.log(ele.cords);
@@ -102,6 +102,9 @@ for (ele of button) {
                 flkty.select(index);
             });
         });
-
+        flkty.on('change', function(index) {
+            map.panTo(data[index].cords);
+            map.setZoom(10);
+        });
     }
 })();
